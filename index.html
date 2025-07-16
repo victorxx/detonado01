@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <style>
+
+/* Reset básico para evitar margens/paddings inesperados */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo da página */
+body {
+    background-color: #000; /* Fundo preto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #eee;
+}
+
+/* Container dos vídeos */
+#videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Estilo dos iframes */
+iframe {
+    flex: 1 1 300px;
+    max-width: 350px;
+    height: 210px;
+    border: 3px solid #4f46e5;
+    background-color: #5b21b6;
+    box-shadow:
+        0 4px 15px rgba(79, 70, 229, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: block; /* garantir que o iframe seja block */
+}
+
+/* Hover no iframe */
+iframe:hover {
+    transform: scale(1.07);
+    box-shadow:
+        0 8px 30px rgba(79, 70, 229, 0.7),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Botão links */
+a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4f46e5;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Hover botão */
+a.button:hover {
+    background-color: #4338ca;
+    box-shadow: 0 8px 30px rgba(79, 70, 229, 0.7);
+}
+
+a.button:focus-visible {
+    outline: 3px solid #a5b4fc;
+    outline-offset: 3px;
+}
+
+/* P igual botão */
+p {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: orangered;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+    margin: 0;
+    text-align: center;
+}
+
+/* Hover p */
+p:hover {
+    background-color: #4338ca;
+    box-shadow: 0 8px 30px rgba(79, 70, 229, 0.7);
+}
+
+/* Container de anúncios */
+#ads {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 220px;
+    background-color: #fff;
+    color: #111;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    user-select: none;
+}
+#btn {
+    padding: 12px 24px;
+    background-color: #4f46e5;         /* Azul vibrante */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.5);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+#btn:hover {
+    background-color: #4338ca;         /* Azul mais escuro no hover */
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.7);
+    transform: scale(1.05);            /* Leve efeito de zoom */
+}
+
+#btn:active {
+    transform: scale(0.98);            /* Efeito de clique */
+    box-shadow: 0 3px 10px rgba(79, 70, 229, 0.4);
+}
+
+#btn:focus-visible {
+    outline: 3px solid #a5b4fc;        /* Acessibilidade para navegação via teclado */
+    outline-offset: 3px;
+}
+
+
+        </style>
+<!-- Meta tags essenciais -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- Título da página -->
+<title>Gampleya Detonado - Guia Completo para Dominar o Jogo</title>
+
+<!-- Descrição para motores de busca -->
+<meta name="description" content="Gampleya Detonado completo com dicas, estratégias, walkthroughs e segredos para você dominar o jogo com facilidade e se tornar um mestre." />
+
+<!-- Palavras-chave relevantes -->
+<meta name="keywords" content="Gampleya, detonado, guia, walkthrough, dicas, estratégias, jogo, segredos, gameplay, tutorial" />
+
+<!-- Autor -->
+<meta name="author" content="Nome do Criador ou Canal" />
+
+<!-- Meta para redes sociais (Open Graph para Facebook, LinkedIn, etc.) -->
+<meta property="og:title" content="Gampleya Detonado - Guia Completo para Dominar o Jogo" />
+<meta property="og:description" content="Gampleya Detonado completo com dicas, estratégias, walkthroughs e segredos para você dominar o jogo com facilidade e se tornar um mestre." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.seusite.com/imagens/gampleya-capa.jpg" />
+
+<!-- Meta para Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Gampleya Detonado - Guia Completo para Dominar o Jogo" />
+<meta name="twitter:description" content="Gampleya Detonado completo com dicas, estratégias, walkthroughs e segredos para você dominar o jogo com facilidade e se tornar um mestre." />
+<meta name="twitter:image" content="https://www.seusite.com/imagens/gampleya-capa.jpg" />
+<meta name="twitter:site" content="@SeuTwitter" />
+
+<!-- Robots para controle de indexação -->
+<meta name="robots" content="index, follow" />
+
+<!-- Idioma do conteúdo -->
+<meta http-equiv="Content-Language" content="pt-BR" />
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+
+
+
+    </head>
+    <body>
+        <div id="ads">
+            <a href="https://victorxx.github.io/airbnbrandom01/">COMECE NO AIRBNB</a>
+        </div>
+        <div id="videos">
+            
+        </div>
+        <button id="btn">carregar</button>
+        <script>
+            let links=[
+               "https://www.youtube.com/embed/_D7BEXStkns","https://www.youtube.com/embed/-O-XskxWR-0","https://www.youtube.com/embed/z4uiaJW-PFk","https://www.youtube.com/embed/G57SnZcUJZ8","https://www.youtube.com/embed/ASWQACY3YpE","https://www.youtube.com/embed/2RCd22qSeNM","https://www.youtube.com/embed/59lC6ukanFs","https://www.youtube.com/embed/9kewO57w_ac","https://www.youtube.com/embed/qj6tMWaVOlc","https://www.youtube.com/embed/63iDPxxRcbs&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/sdVfHr8aMfk","https://www.youtube.com/embed/KC8UDoGSx-0","https://www.youtube.com/embed/zQXh-JMzeaM","https://www.youtube.com/embed/IQrUa-0XJW8","https://www.youtube.com/embed/jt4TFUdznU4","https://www.youtube.com/embed/5QrKorZpjEY","https://www.youtube.com/embed/Iql9Rf8hbPA","https://www.youtube.com/embed/MxgYF6QzvbQ","https://www.youtube.com/embed/_gyBGY7l1Tc","https://www.youtube.com/embed/iyxnVtXmYR4","https://www.youtube.com/embed/3Y2flUwKeBA","https://www.youtube.com/embed/SQUxoYPRPhs","https://www.youtube.com/embed/2NRZZFPSyjM","https://www.youtube.com/embed/wipU_dR3FSA","https://www.youtube.com/embed/9GrvgpSdyPI","https://www.youtube.com/embed/yxbRvl9rrms","https://www.youtube.com/embed/nUGfRzH51hE","https://www.youtube.com/embed/HsKUSJ6t6ww","https://www.youtube.com/embed/79KyfleqBzw","https://www.youtube.com/embed/OOk68x1FPBc","https://www.youtube.com/embed/SV8oXfdp0Ig","https://www.youtube.com/embed/uF13Vz_oL4U","https://www.youtube.com/embed/UpULq19RGl4","https://www.youtube.com/embed/fzQUwwt2JHE","https://www.youtube.com/embed/817kLtVaOAI&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/f0-aT8n4KNg","https://www.youtube.com/embed/k3UouZD8mgY","https://www.youtube.com/embed/IfsnACcpidI","https://www.youtube.com/embed/ohAfG3egksc","https://www.youtube.com/embed/5U-JxDvWg1Q","https://www.youtube.com/embed/Fpkh0vHtXac","https://www.youtube.com/embed/UiYqF6dAlms","https://www.youtube.com/embed/JtfIlnnTmgo","https://www.youtube.com/embed/loZ-FPq7viA","https://www.youtube.com/embed/Ut3ITRhzU3Q&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/yrELuc7ulyo","https://www.youtube.com/embed/FqBXU9P1-_U","https://www.youtube.com/embed/PQoJ_dnAFs0","https://www.youtube.com/embed/rqsh6ijyGzA","https://www.youtube.com/embed/vcdJu0nu7ac","https://www.youtube.com/embed/817kLtVaOAI","https://www.youtube.com/embed/tauXH20i6bs","https://www.youtube.com/embed/vG5-Dlg4OG4&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/qUxSsJ8ZCtM","https://www.youtube.com/embed/-ahOsZdF5js","https://www.youtube.com/embed/9kewO57w_ac&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/gNdLsCJvkZs","https://www.youtube.com/embed/WcjLzqr7PqQ","https://www.youtube.com/embed/Nqz9UQ3-mwo","https://www.youtube.com/embed/Y4BhIjDbel4","https://www.youtube.com/embed/FvatsJkLVB4","https://www.youtube.com/embed/N8lIdbkmFlA","https://www.youtube.com/embed/5i9kn85JVhA","https://www.youtube.com/embed/Le1IQYn1sOs&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/aC5-HgTynqA","https://www.youtube.com/embed/YASSkp7X9qs","https://www.youtube.com/embed/3FqASNvefIo","https://www.youtube.com/embed/0DEEfWiXlyA","https://www.youtube.com/embed/4grCzKj8VW0&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/Le1IQYn1sOs","https://www.youtube.com/embed/BOeERpOnhGU","https://www.youtube.com/embed/JrfSgAIZLg0","https://www.youtube.com/embed/pnn71NUmN0U","https://www.youtube.com/embed/oKmFO4CO-HA","https://www.youtube.com/embed/SpMpooWs7Bo","https://www.youtube.com/embed/aC5-HgTynqA&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/Ajx84saPaG0","https://www.youtube.com/embed/X6WQNRBaRp4","https://www.youtube.com/embed/NllOmM04o4k&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/z4uiaJW-PFk&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/c4ICmYy9aps","https://www.youtube.com/embed/Ja7FqQimXIk","https://www.youtube.com/embed/ATjHuxsLgco","https://www.youtube.com/embed/XIMLrr57hlQ","https://www.youtube.com/embed/LYev4JSGqHQ","https://www.youtube.com/embed/iI0Xj49l9Ak","https://www.youtube.com/embed/korR5L7CJ64","https://www.youtube.com/embed/_sfAMSSGReM","https://www.youtube.com/embed/Zm1aK4Gqp1k","https://www.youtube.com/embed/b9kY7JNBj0A","https://www.youtube.com/embed/laUg6_0zEKo&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/VlWqt73-ass","https://www.youtube.com/embed/NAXEJ1EUwhE","https://www.youtube.com/embed/-O-XskxWR-0&pp=0gcJCc0JAYcqIYzv","https://www.youtube.com/embed/6mYD5UJLAaQ","https://www.youtube.com/embed/Ut3ITRhzU3Q","https://www.youtube.com/embed/NPhtVaUVfbs"
+            
+            ];
+            let index=0;
+            let pular=0;
+            let limiteindex=1;
+            let botao=document.getElementById('btn');
+            let video=document.getElementById('videos');
+            function inserir(){
+                let fim=index+limiteindex;
+                for(;index<fim && index<links.length;index++){
+                    let iframe=document.createElement('iframe');
+                    iframe.src=links[index];
+                    iframe.frameBorder='0';
+                    video.appendChild(iframe); // Adiciona o iframe
+                    pular++;     
+                    if(pular==2) {
+                        const propaganda2=document.createElement('p');
+                        propaganda2.innerHTML=`<a href="https://geocredibnkvitoria.com/"> ESTÁ PRECISANDO DE ->CRÉDITO PESSOAL</a>`;
+                        videos.appendChild(propaganda2);
+                    }  
+                    if(pular==3){
+                        const propaganda2=document.createElement('p');
+                        propaganda2.innerHTML=`<a href="https://victorxx.github.io/VPSVENDA/contatoroberto.html"> SEGUROS E ETC.....</a>`;
+                        videos.appendChild(propaganda2);
+
+                    }           // Conta mais um
+
+                    if (pular === 5) {
+                            const pularLinha = document.createElement('br');
+                            const propaganda=document.createElement('p');
+                            propaganda.innerHTML=`<a href="https://victorxx.github.io/carros01gith/uteis.html">CONFERIR A OPORTUNIDADE</a>`;
+                            video.appendChild(pularLinha);
+                            videos.appendChild(propaganda); // Adiciona quebra de linha
+                            pular = 0; // Reseta o contador e volta ao normal
+                        }
+                    if(pular===4){
+                         const propaganda2=document.createElement('p');
+                        propaganda2.innerHTML=`<a href="https://victorxx.github.io/topicogithub01/randomizador.html"> CONFIRA A OPORTUNIDADE.....</a>`;
+                        videos.appendChild(propaganda2);
+
+                    }
+                    
+
+                   
+                }
+                if(index>=links.length){
+                    botao.disabled=true;
+                    botao.textContent='chegou no limite';
+                }
+            }
+            botao.addEventListener('click',inserir);
+        </script>
+    </body>
+</html>
